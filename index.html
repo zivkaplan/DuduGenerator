@@ -13,12 +13,14 @@
         <title>מחולל משפטי דודו</title>
     </head>
     <body>
-        <main class="container">
+        <main dir="rtl" class="container">
             <div
                 class="d-flex flex-column justify-content-center align-items-center mt-3"
             >
-                <h1 class="display-1">מחולל משפטי דודו</h1>
-                <button id="generator-btn">לחץ למשפט</button>
+                <h1 class="display-1 mb-4">מחולל משפטי דודו</h1>
+                <button class="btn btn-dark" id="generator-btn">
+                    לחץ למשפט
+                </button>
                 <figure
                     id="blockquote-figure"
                     class="text-center"
@@ -29,7 +31,7 @@
                     </blockquote>
                     <figcaption class="mt-3 blockquote-footer">
                         דודו,
-                        <cite title="Source Title">OL113</cite>
+                        <cite title="Source Title">קבוצת OL113</cite>
                     </figcaption>
                 </figure>
             </div>
@@ -46,8 +48,8 @@
             .addEventListener("click", (e) => {
                 const phrases_arr = [
                     "מי יכול להגיד לי למה זה גועל נפש של קוד?",
-                    "ה-מ-ח-י-ה",
-                    "למה לא הרמתם דגל?",
+                    "א-מחיה!",
+                    "אם אתם תקועים אז תרימו דגל",
                     "בנפנופי ידיים",
                     "בכמה דרכים אפשר לאתחל LUT?",
                     "היית צריך לתפוס את זה כבר בריוויו",
@@ -60,7 +62,10 @@
                     "לא ככה מדבגים, קודם אנחנו מקטינים את הבעיה",
                     "אתם הקבוצה האיטית ביותר שהייתה לי",
                     "חיים הפיל",
+                    "אף אחד לא פתר נכון את הבוחן",
+                    "רבותיי זה לוקח יותר מדי זמן",
                 ];
+
                 document.getElementById("blockquote-figure").style =
                     "transform: scale(100%);";
                 document.getElementById("quote").innerText =
