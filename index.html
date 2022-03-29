@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <title>מחולל משפטי דודו</title>
+    </head>
+    <body>
+        <main class="container">
+            <div
+                class="d-flex flex-column justify-content-center align-items-center mt-3"
+            >
+                <h1 class="display-1">מחולל משפטי דודו</h1>
+                <button id="generator-btn">לחץ למשפט</button>
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p class="mt-3 display-4" id="quote"></p>
+                    </blockquote>
+                    <figcaption class="mt-3 blockquote-footer">
+                        דודו,
+                        <cite title="Source Title">OL113</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </main>
+    </body>
+
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        document
+            .getElementById("generator-btn")
+            .addEventListener("click", (e) => {
+                const phrases_arr = [
+                    "מי יכול להגיד לי למה זה גועל נפש של קוד?",
+                    "ה-מ-ח-י-ה",
+                    "למה לא הרמתם דגל?",
+                    "בנפנופי ידיים",
+                    "בכמה דרכים אפשר לאתחל LUT?",
+                    "היית צריך לתפוס את זה כבר בריוויו",
+                    "זה על הראש צוות, חברים",
+                    "לא יקום ולא יהיה!",
+                    "woooops",
+                    "מה מיד קופץ פה וצורם לעין?",
+                    "Performance!",
+                    "למה זה לא קונסט?",
+                    "לא ככה מדבגים, קודם אנחנו מקטינים את הבעיה",
+                ];
+
+                document.getElementById("quote").innerText =
+                    phrases_arr[getRandom(0, phrases_arr.length)];
+            });
+    </script>
+</html>
