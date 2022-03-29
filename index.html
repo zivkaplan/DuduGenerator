@@ -19,7 +19,11 @@
             >
                 <h1 class="display-1">מחולל משפטי דודו</h1>
                 <button id="generator-btn">לחץ למשפט</button>
-                <figure class="text-center">
+                <figure
+                    id="blockquote-figure"
+                    class="text-center"
+                    style="transform: scale(0)"
+                >
                     <blockquote class="blockquote">
                         <p class="mt-3 display-4" id="quote"></p>
                     </blockquote>
@@ -55,8 +59,10 @@
                     "למה זה לא קונסט?",
                     "לא ככה מדבגים, קודם אנחנו מקטינים את הבעיה",
                     "אתם הקבוצה האיטית ביותר שהייתה לי",
+                    "חיים הפיל",
                 ];
-
+                document.getElementById("blockquote-figure").style =
+                    "transform: scale(100%);";
                 document.getElementById("quote").innerText =
                     phrases_arr[getRandom(0, phrases_arr.length)];
             });
